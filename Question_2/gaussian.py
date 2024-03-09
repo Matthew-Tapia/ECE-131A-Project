@@ -15,17 +15,14 @@ def find_sigma(data_set, mu):
 if __name__ == "__main__":
     data = np.loadtxt('data.txt')
 
-    # Change with own implementation
     mean = find_mu(data)
     stddev = find_sigma(data, mean)
 
     print(f"Mean: {mean:.3f}")
     print(f"Standard Deviation: {stddev:.3f}")
 
-    # Plot histogram
-    plt.hist(data, bins='auto', density=True)
+    plt.hist(data, density=True)
 
-    # Plot PDF of the Gaussian distribution
     xmin, xmax = plt.xlim()
     x = np.linspace(xmin, xmax, 100)
     plt.plot(x, norm.pdf(x, mean, stddev))

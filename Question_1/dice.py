@@ -18,5 +18,4 @@ if __name__ == "__main__":
         weighted_probability = simulate_die_tosses(tosses, [1, 4, 6, 8, 9, 10, 12] + 2 * [2, 3, 5, 7, 11])
 
         print(f"{tosses} Tosses ->  Estimated probability of obtaining an odd number: {probability}")
-        print(
-            f"{tosses} Weighted Tosses ->  Estimated probability of obtaining an odd number with a weighted die: {weighted_probability} \n\n")
+        print(f"{tosses} Weighted Tosses ->  Estimated probability of obtaining an odd number with a weighted die: {weighted_probability} \n\n")
